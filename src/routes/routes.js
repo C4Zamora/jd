@@ -23,5 +23,8 @@ export const router = createBrowserRouter([
     path: "jd/dashboard",
     Component: Dashboard,
   },
+   {
+    basename: "/jd/login", // Cambia esto según el nombre de tu repositorio
+  }
 ]);
 

@@ -1,0 +1,17 @@
+.register-message {
+  margin-top: 1.4rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  text-align: center;
+}
+
+.register-message span {
+  color: #61dafb;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.3rem;
+}
+
+.register-message span:hover {
+  text-decoration: underline;
+}

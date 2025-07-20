@@ -1,0 +1,270 @@
+/* Resetear márgenes y tamaño de página */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Página principal */
+.login-page {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #041C32 0%,     /* Azul oscuro profundo */
+    #04293A 25%,    /* Azul noche */
+    #064663 50%,    /* Azul más vivo */
+    #0E2954 75%,    /* Azul violeta */
+    #000000 100%    /* Negro espacial */
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+
+
+/* Card de login */
+.login-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(18px);
+  border-radius: 25px;
+  padding: 3rem 2.5rem;
+  width: 400px;
+  box-shadow: 0 0 25px rgba(102, 54, 36, 0.12);
+  z-index: 1;
+  color: #e6f0ff;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+  transform: scale(1.02);
+}
+
+.login-card h1.title {
+  font-size: 2.4rem;
+  color: #cddfff;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 8px #61dafb;
+}
+
+
+/* Etiquetas */
+.login-card label {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #ddd;
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.login-card input::placeholder {
+  color: #ccc;
+}
+
+/* Recordar y olvidaste */
+.extra-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  color: #bbb;
+}
+
+.extra-options a {
+  color: #8fa8ff;
+  text-decoration: none;
+}
+
+.extra-options a:hover {
+  text-decoration: underline;
+}
+
+/* Botón */
+.login-card button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #61dafb, #1f85ff);
+  color: white;
+  transition: transform 0.2s, background-color 0.3s;
+  box-shadow: 0 0 10px rgba(97, 218, 251, 0.3);
+}
+
+.login-card button:hover {
+  background: linear-gradient(to right, #1f85ff, #61dafb);
+  transform: scale(1.02);
+}
+.register-message {
+  margin-top: 1.4rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.register-message span {
+  color: #61dafb;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 0.3rem;
+}
+
+.register-message span:hover {
+  text-decoration: underline;
+}
+
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1rem 1rem 0.6rem;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: #fff;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input-group input::placeholder {
+  color: transparent;
+}
+
+.input-group input:focus {
+  border-color: #61dafb;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.input-group label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 1rem;
+  color: #ccc;
+  background: transparent;
+  transition: 0.3s ease all;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -0.6rem;
+  left: 0.8rem;
+  background-color: rgba(13, 28, 50, 0.9); /* fondo oscuro tras texto */
+  padding: 0 0.3rem;
+  font-size: 0.75rem;
+  color: #61dafb;
+}
+
+/* Imagen del planeta */
+.planet-img {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 120px;
+  z-index: 1;
+}
+
+/* Imagen del robot */
+.robot-img {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+  width: 180px;
+  z-index: 1;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+  .planet-img {
+    top: 20px;
+    left: 20px;
+    width: 80px;
+  }
+
+  .robot-img {
+    bottom: 20px;
+    right: 20px;
+    width: 120px;
+  }
+}
+/* Planeta como fondo sutil */
+/* Planeta con animación flotante */
+.planet-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  animation: floatPlanet 8s ease-in-out infinite;
+}
+
+/* Animación flotante */
+@keyframes floatPlanet {
+  0% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+}
+
+/* Responsive para el planeta */
+@media screen and (max-width: 768px) {
+  .planet-bg {
+    width: 250px;
+    top: 55%;
+  }
+}
+
+/* Robot dentro del login-card */
+.login-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+
